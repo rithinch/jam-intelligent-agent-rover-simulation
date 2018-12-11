@@ -1,0 +1,136 @@
+Interpreter::parse: Building interpreter from: ./experiments/facts_5_10_10.txt
+JAM Parser Version 65 + 76i: 
+JAM definition parse successful.
+Interpreter::parse: Building interpreter from: mars_rover_agent.jam
+JAM Parser Version 65 + 76i: 
+JAM definition parse successful.
+EXPLORE_ROCKS_START
+current position:0,0
+current position:1,0
+current position:2,0
+current position:3,0
+current position:4,0
+current position:5,0
+current position:6,0
+current position:6,1
+current position:6,2
+current position:6,3
+current position:6,4
+current position:6,5
+current position:6,6
+current position:6,7
+current position:6,8
+current position:6,9
+current position:6,10
+ANALYZING ROCK
+current position:5,10
+current position:4,10
+current position:3,10
+current position:2,10
+current position:1,10
+current position:0,10
+current position:-1,10
+current position:-2,10
+current position:-3,10
+current position:-4,10
+current position:-5,10
+current position:-6,10
+current position:-7,10
+current position:-8,10
+current position:-9,10
+current position:-9,9
+current position:-9,8
+current position:-9,7
+current position:-9,6
+current position:-9,5
+current position:-9,4
+current position:-9,3
+current position:-9,2
+current position:-9,1
+current position:-9,0
+current position:-9,-1
+current position:-9,-2
+current position:-9,-3
+ANALYZING ROCK
+current position:-8,-3
+current position:-7,-3
+current position:-6,-3
+current position:-5,-3
+current position:-4,-3
+current position:-3,-3
+current position:-2,-3
+current position:-1,-3
+current position:0,-3
+current position:1,-3
+current position:2,-3
+current position:3,-3
+current position:4,-3
+current position:4,-2
+current position:4,-1
+current position:4,0
+current position:4,1
+ANALYZING ROCK
+WATER FOUND
+ROCK PICKED UP
+GOING TO BASE
+current position:3,1
+current position:2,1
+current position:1,1
+current position:0,1
+current position:0,0
+current position:1,0
+current position:2,0
+current position:3,0
+current position:4,0
+current position:5,0
+ANALYZING ROCK
+current position:4,0
+current position:3,0
+current position:2,0
+current position:1,0
+current position:0,0
+current position:-1,0
+current position:-2,0
+current position:-3,0
+current position:-4,0
+current position:-5,0
+current position:-6,0
+current position:-7,0
+current position:-8,0
+current position:-9,0
+current position:-9,-1
+current position:-9,-2
+current position:-9,-3
+ANALYZING ROCK
+WATER FOUND
+ROCK PICKED UP
+GOING TO BASE
+current position:-8,-3
+current position:-7,-3
+current position:-6,-3
+current position:-5,-3
+current position:-4,-3
+current position:-3,-3
+current position:-2,-3
+current position:-1,-3
+current position:0,-3
+current position:0,-2
+current position:0,-1
+current position:0,0
+ANALYSIS COMPLETED
+EXPLORE_ROCKS_END
+
+JAM: All of the agent's top-level goals have been achieved!  Returning...
+
+Runtime statistics follow:
+
+  Number of APLs generated:	715
+  Number of Null APLs:		599
+  Number of Goals established:	116
+  Number of interpreter cycles:	599
+
+  APL generation time:		0.011 seconds.
+  Intending time:		0.002 seconds.
+  Plan execution time:		0.027 seconds.
+  Observer execution time:	0.0 seconds.
+  Total run time:		0.047 seconds.

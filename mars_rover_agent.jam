@@ -1,0 +1,133 @@
+GOALS:
+	ACHIEVE explore_rocks;
+
+PLAN:	{
+	NAME:	"explore all the rocks agents knows the locations of"
+	GOAL:
+		ACHIEVE explore_rocks;
+	BODY:
+		EXECUTE println "EXPLORE_ROCKS_START";
+		RETRIEVE position $x $y;
+		RETRIEVE base $base_x $base_y;
+    RETRIEVE number_of_known_rocks $n;
+    RETRIEVEALL $all_rocks known_rock $rock $a $b $w;
+		EXECUTE println "current position:"$x","$y;
+
+    ASSIGN $i 0;
+    WHILE : TEST (< $i $n)
+	  {
+      NEXTFACT $all_rocks rock $rock $a $b $w;
+			ASSIGN $has_water 0;
+			PERFORM goto_position $a $b $x $y;
+			PERFORM analyze_the_rock $w $has_water;
+			WHEN : TEST (== $has_water 1){
+				EXECUTE println "WATER FOUND";
+				PERFORM pick_up_rock $rock $a $b $w;
+				EXECUTE println "GOING TO BASE";
+				PERFORM goto_position $base_x $base_y $x $y;
+			};
+
+			ASSIGN $i (+ $i 1);
+		};
+
+    EXECUTE println  "ANALYSIS COMPLETED";
+		PERFORM goto_position $base_x $base_y $x $y;
+		EXECUTE println "EXPLORE_ROCKS_END";
+}
+
+PLAN:	{
+	NAME:	"analyze the traces of a rock to check if it has water"
+	GOAL:
+		ACHIEVE analyze_the_rock $w $has_water;
+	BODY:
+		EXECUTE println "ANALYZING ROCK";
+		ASSIGN $has_water 0;
+		WHEN : TEST (== $w 1){
+			ASSIGN $has_water 1;
+		};
+}
+
+PLAN:	{
+	NAME:	"pick up a rock"
+	GOAL:
+		ACHIEVE pick_up_rock $rock $a $b $w;
+	BODY:
+		ASSERT rocks_collected $rock $a $b $w; //Add it to the rock collection
+		RETRACT known_rock $rock $a $b $w; //Remove the rock from that location since it was picked up
+		EXECUTE println "ROCK PICKED UP";
+}
+
+PLAN:	{
+	NAME:	"go to a certain position (x2,y2) from (x1,y1)"
+	GOAL:
+		ACHIEVE goto_position $x2 $y2 $x1 $y1;
+	BODY:
+
+		WHEN: TEST (> $x2 $x1){
+			WHILE: TEST (!= $x2 $x1){
+				PERFORM move_right $x1;
+    		EXECUTE println "current position:"$x1","$y1;
+			};
+		};
+
+		WHEN: TEST (< $x2 $x1){
+			WHILE: TEST (!= $x2 $x1){
+				PERFORM move_left $x1;
+    		EXECUTE println "current position:"$x1","$y1;	
+			};
+		};
+
+		WHEN: TEST (> $y2 $y1){
+			WHILE: TEST (!= $y2 $y1){
+				PERFORM move_forward $y1;
+    		EXECUTE println "current position:"$x1","$y1;
+			};
+		};
+
+		WHEN: TEST (< $y2 $y1){
+			WHILE: TEST (!= $y2 $y1){
+				PERFORM move_backward $y1;
+    		EXECUTE println "current position:"$x1","$y1;	
+			};
+		};
+}
+
+PLAN: {
+  NAME:	"move forward"	//move to rover up
+	GOAL:
+		ACHIEVE move_forward $y;
+	BODY:
+		RETRIEVE position $a $b;
+		ASSIGN $y (+ $y 1);
+		ASSERT position $a $y;
+}
+
+PLAN: {
+  NAME:	"move backward"	//move the rover down
+	GOAL:
+		ACHIEVE move_backward $y;
+	BODY:
+		RETRIEVE position $a $b;
+		ASSIGN $y (- $y 1);
+		ASSERT position $a $y;
+}
+
+PLAN: {
+  NAME:	"move right"	//move the rover to right
+	GOAL:
+		ACHIEVE move_right $x;
+	BODY:
+		RETRIEVE position $a $b;
+		ASSIGN $x (+ $x 1);
+		ASSERT position $x $b;
+}
+
+PLAN: {
+  NAME:	"move left"	//move the rover to left
+	GOAL:
+		ACHIEVE move_left $x;
+	BODY:
+		RETRIEVE position $a $b;
+		ASSIGN $x (- $x 1);
+		ASSERT position $x $b;
+}

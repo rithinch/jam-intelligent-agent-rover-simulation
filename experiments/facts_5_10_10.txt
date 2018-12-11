@@ -1,0 +1,9 @@
+FACTS: 
+FACT base 0 0;
+FACT position 0 0;
+FACT number_of_known_rocks 5;
+FACT known_rock 1 -9 -3 1;
+FACT known_rock 2 5 0 0;
+FACT known_rock 3 4 1 1;
+FACT known_rock 4 -9 -3 0;
+FACT known_rock 5 6 10 0;

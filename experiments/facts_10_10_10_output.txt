@@ -1,0 +1,246 @@
+Interpreter::parse: Building interpreter from: ./experiments/facts_10_10_10.txt
+JAM Parser Version 65 + 76i: 
+JAM definition parse successful.
+Interpreter::parse: Building interpreter from: mars_rover_agent.jam
+JAM Parser Version 65 + 76i: 
+JAM definition parse successful.
+EXPLORE_ROCKS_START
+current position:0,0
+current position:1,0
+current position:2,0
+current position:3,0
+current position:4,0
+current position:5,0
+current position:5,-1
+current position:5,-2
+current position:5,-3
+current position:5,-4
+current position:5,-5
+current position:5,-6
+current position:5,-7
+ANALYZING ROCK
+current position:4,-7
+current position:3,-7
+current position:3,-6
+current position:3,-5
+ANALYZING ROCK
+WATER FOUND
+ROCK PICKED UP
+GOING TO BASE
+current position:2,-5
+current position:1,-5
+current position:0,-5
+current position:0,-4
+current position:0,-3
+current position:0,-2
+current position:0,-1
+current position:0,0
+current position:1,0
+current position:2,0
+current position:2,1
+current position:2,2
+current position:2,3
+ANALYZING ROCK
+WATER FOUND
+ROCK PICKED UP
+GOING TO BASE
+current position:1,3
+current position:0,3
+current position:0,2
+current position:0,1
+current position:0,0
+current position:-1,0
+current position:-2,0
+current position:-2,1
+current position:-2,2
+current position:-2,3
+current position:-2,4
+ANALYZING ROCK
+WATER FOUND
+ROCK PICKED UP
+GOING TO BASE
+current position:-1,4
+current position:0,4
+current position:0,3
+current position:0,2
+current position:0,1
+current position:0,0
+current position:1,0
+current position:2,0
+current position:3,0
+current position:4,0
+current position:5,0
+current position:6,0
+current position:7,0
+current position:8,0
+current position:8,-1
+current position:8,-2
+current position:8,-3
+current position:8,-4
+current position:8,-5
+current position:8,-6
+current position:8,-7
+current position:8,-8
+current position:8,-9
+current position:8,-10
+ANALYZING ROCK
+current position:7,-10
+current position:6,-10
+current position:5,-10
+current position:4,-10
+current position:3,-10
+current position:2,-10
+current position:1,-10
+current position:0,-10
+current position:-1,-10
+current position:-2,-10
+current position:-3,-10
+current position:-4,-10
+current position:-5,-10
+current position:-6,-10
+current position:-7,-10
+current position:-8,-10
+current position:-8,-9
+current position:-8,-8
+current position:-8,-7
+current position:-8,-6
+current position:-8,-5
+current position:-8,-4
+current position:-8,-3
+current position:-8,-2
+current position:-8,-1
+current position:-8,0
+current position:-8,1
+current position:-8,2
+current position:-8,3
+ANALYZING ROCK
+current position:-7,3
+current position:-6,3
+current position:-5,3
+current position:-4,3
+current position:-3,3
+current position:-2,3
+current position:-1,3
+current position:0,3
+current position:1,3
+current position:2,3
+current position:3,3
+current position:4,3
+current position:5,3
+current position:5,4
+current position:5,5
+current position:5,6
+current position:5,7
+current position:5,8
+ANALYZING ROCK
+WATER FOUND
+ROCK PICKED UP
+GOING TO BASE
+current position:4,8
+current position:3,8
+current position:2,8
+current position:1,8
+current position:0,8
+current position:0,7
+current position:0,6
+current position:0,5
+current position:0,4
+current position:0,3
+current position:0,2
+current position:0,1
+current position:0,0
+current position:-1,0
+current position:-2,0
+current position:-3,0
+current position:-4,0
+current position:-4,-1
+current position:-4,-2
+current position:-4,-3
+current position:-4,-4
+current position:-4,-5
+ANALYZING ROCK
+WATER FOUND
+ROCK PICKED UP
+GOING TO BASE
+current position:-3,-5
+current position:-2,-5
+current position:-1,-5
+current position:0,-5
+current position:0,-4
+current position:0,-3
+current position:0,-2
+current position:0,-1
+current position:0,0
+current position:1,0
+current position:2,0
+current position:3,0
+current position:4,0
+current position:5,0
+current position:5,-1
+current position:5,-2
+current position:5,-3
+current position:5,-4
+current position:5,-5
+current position:5,-6
+current position:5,-7
+current position:5,-8
+current position:5,-9
+ANALYZING ROCK
+WATER FOUND
+ROCK PICKED UP
+GOING TO BASE
+current position:4,-9
+current position:3,-9
+current position:2,-9
+current position:1,-9
+current position:0,-9
+current position:0,-8
+current position:0,-7
+current position:0,-6
+current position:0,-5
+current position:0,-4
+current position:0,-3
+current position:0,-2
+current position:0,-1
+current position:0,0
+current position:-1,0
+current position:-2,0
+current position:-3,0
+current position:-4,0
+current position:-5,0
+current position:-6,0
+current position:-7,0
+current position:-8,0
+current position:-9,0
+current position:-10,0
+ANALYZING ROCK
+WATER FOUND
+ROCK PICKED UP
+GOING TO BASE
+current position:-9,0
+current position:-8,0
+current position:-7,0
+current position:-6,0
+current position:-5,0
+current position:-4,0
+current position:-3,0
+current position:-2,0
+current position:-1,0
+current position:0,0
+ANALYSIS COMPLETED
+EXPLORE_ROCKS_END
+
+JAM: All of the agent's top-level goals have been achieved!  Returning...
+
+Runtime statistics follow:
+
+  Number of APLs generated:	1385
+  Number of Null APLs:		1159
+  Number of Goals established:	226
+  Number of interpreter cycles:	1159
+
+  APL generation time:		0.013 seconds.
+  Intending time:		0.003 seconds.
+  Plan execution time:		0.049 seconds.
+  Observer execution time:	0.0 seconds.
+  Total run time:		0.076 seconds.
