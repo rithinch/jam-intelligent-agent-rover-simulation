@@ -1,5 +1,5 @@
-# Rover-JAM-Agent-Simulation
-Simplified Rover Simulation using JAM Agent and Python for Visualizations (matplotlib) :robot:
+# Simple Mars Rover Simulation using JAM Intelligent Agent :robot:
+Simplified Rover Simulation using JAM Agent and Python for Visualizations (matplotlib) 
 
 ## Problem Definition
 
