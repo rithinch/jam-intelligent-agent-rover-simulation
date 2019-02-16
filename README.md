@@ -3,7 +3,7 @@ Simplified Rover Simulation using JAM Agent and Python for Visualizations (matpl
 
 ## Problem Definition
 
-This paper presents a simulation of a simplified rover whose primary goal is to explore the rocks placed in a an two
+This repo presents a simulation of a simplified rover whose primary goal is to explore the rocks placed in a an two
 dimensional grid. The rover has a number of capabilities i.e. moving around the area, analyzing a rock to check if
 it has traces of water and taking it back to the base if it does. The problem can be expressed as follows; given a
 m×n grid with total area α and r rocks placed in certain coordinates, we need to ensure the rover travels to the
