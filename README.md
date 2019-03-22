@@ -1,6 +1,8 @@
 # Simple Mars Rover Simulation
 Simplified Rover Simulation using JAM Intelligent Agent Framework and Python for Visualizations (matplotlib) :robot: 
 
+![Simulation](50_10_10_simulation.gif)
+
 ## Problem Definition
 
 This repo presents a simulation of a simplified rover whose primary goal is to explore the rocks placed in a an two
