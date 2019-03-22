@@ -81,7 +81,7 @@ def parseJAMOutput(output):
   
   return l, events
 
-def vizualize(xmax, ymax, base_x, base_y, rocks, movements, events):
+def vizualize(xmax, ymax, base_x, base_y, rocks, movements, events, save=True):
 
   fig, ax = plt.subplots(num=None, figsize=(10, 6), dpi=80, facecolor='w', edgecolor='k')
   fig.canvas.set_window_title('310CT Coursework')
@@ -123,9 +123,12 @@ def vizualize(xmax, ymax, base_x, base_y, rocks, movements, events):
 
   ani = animation.FuncAnimation(fig, update, frames= np.arange(0, len(movements)),
                       init_func=init, interval=35, blit=True, repeat=False)
-
   plt.grid(True)
-  plt.show()
+
+  if save:
+    ani.save(f'./{len(rocks)}_{xmax}_{ymax}_simulation.gif', fps=35, writer='imagemagick')
+  else:
+    plt.show()
 
 
 def genRandom():
